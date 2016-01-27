@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Bank details:</strong>
+  <%= @super_secret_information.bank_details %>
+</p>
+
+<p>
+  <strong>Embarrassing facts:</strong>
+  <%= @super_secret_information.embarrassing_facts %>
+</p>
+
+<%= link_to 'Edit', edit_super_secret_information_path(@super_secret_information) %> |
+<%= link_to 'Back', super_secret_informations_path %>

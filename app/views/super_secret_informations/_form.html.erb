@@ -1,0 +1,25 @@
+<%= form_for(@super_secret_information) do |f| %>
+  <% if @super_secret_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@super_secret_information.errors.count, "error") %> prohibited this super_secret_information from being saved:</h2>
+
+      <ul>
+      <% @super_secret_information.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bank_details %><br>
+    <%= f.text_field :bank_details %>
+  </div>
+  <div class="field">
+    <%= f.label :embarrassing_facts %><br>
+    <%= f.text_field :embarrassing_facts %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
